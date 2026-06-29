@@ -12,16 +12,16 @@ export const SectionHeader = ({ title }: { title: string }) => (
   <h2 className="text-xl font-bold text-fg mb-4">{title}</h2>
 )
 
-export const Card = ({ children, className, lift, style }: { children: React.ReactNode, className?: string, lift?: boolean, style?: React.CSSProperties }) => (
-  <div className={cn("bg-background border border-border rounded-[1.5rem]", lift && "lift shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.1)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.2)]", className)} style={style}>
+export const Card = ({ children, className, lift, style, ...props }: { children: React.ReactNode, className?: string, lift?: boolean, style?: React.CSSProperties, onClick?: () => void }) => (
+  <div className={cn("bg-surface border border-border rounded-xl", lift && "lift shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.1)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.2)]", className)} style={style} {...props}>
     {children}
   </div>
 )
 
 export const Button = ({ children, variant = "primary", size = "md", className, ...props }: any) => {
-  const base = "inline-flex items-center justify-center font-medium rounded-full transition-all focusable active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none"
+  const base = "inline-flex items-center justify-center font-medium rounded-xl transition-all focusable active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none"
   const variants = {
-    primary: "bg-primary text-primary-fg hover:bg-primary/90 shadow-sm",
+    primary: "bg-primary text-white hover:bg-primary/90 shadow-sm",
     ghost: "bg-transparent text-fg hover:bg-surface-2",
     danger: "bg-down-bg text-down hover:bg-down/10",
     outline: "bg-transparent border border-border text-fg hover:bg-surface-2"
@@ -36,18 +36,25 @@ export const Button = ({ children, variant = "primary", size = "md", className, 
 export const Chip = ({ children, tone = "neutral", className }: any) => {
   const tones = {
     neutral: "bg-surface text-fg border-border",
-    up: "bg-green-100 text-green-800 border-green-200",
-    blue: "bg-blue-100 text-blue-800 border-blue-200",
+    up: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20 dark:text-emerald-400",
+    blue: "bg-primary/10 text-primary border-primary/20",
     primary: "bg-primary/10 text-primary border-primary/20",
   }
-  return <span className={cn("inline-flex items-center px-2 py-0.5 rounded-full text-[12px] font-bold border", tones[tone as keyof typeof tones] || tones.neutral, className)}>{children}</span>
+  return <span className={cn("inline-flex items-center px-2 py-0.5 rounded-xl text-[12px] font-bold border", tones[tone as keyof typeof tones] || tones.neutral, className)}>{children}</span>
 }
 
-export const IconBadge = ({ icon: Icon, tone = "blue", className }: any) => (
-  <div className={cn("flex items-center justify-center size-10 rounded-xl bg-blue-50 text-blue-600 shrink-0", className)}>
-    <Icon className="size-5" />
-  </div>
-)
+export const IconBadge = ({ icon: Icon, tone = "primary", className }: any) => {
+  const tones = {
+    primary: "bg-primary/10 text-primary",
+    ink: "bg-surface-2 text-fg",
+    hero: "bg-background text-fg shadow-sm border border-border"
+  }
+  return (
+    <div className={cn("flex items-center justify-center size-10 rounded-xl shrink-0", tones[tone as keyof typeof tones] || tones.primary, className)}>
+      <Icon className="size-5" />
+    </div>
+  )
+}
 
 export const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(({ className, ...props }, ref) => (
   <input ref={ref} className={cn("flex h-10 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-fg-3 focusable disabled:cursor-not-allowed disabled:opacity-50 transition-colors", className)} {...props} />
@@ -73,7 +80,7 @@ export const Field = ({ label, children, className }: { label: string, children:
 
 export const EmptyHint = ({ icon: Icon, title, cta, className }: any) => (
   <div className={cn("flex flex-col items-center justify-center text-center p-8 border border-dashed border-border rounded-xl bg-surface/50", className)}>
-    <div className="size-12 rounded-full bg-surface-2 flex items-center justify-center mb-4 text-fg-3">
+    <div className="size-12 rounded-xl bg-surface-2 flex items-center justify-center mb-4 text-fg-3">
       <Icon className="size-6" />
     </div>
     <h3 className="text-[14px] font-bold text-fg mb-4">{title}</h3>

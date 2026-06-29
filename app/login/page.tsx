@@ -38,7 +38,7 @@ export default function LoginPage() {
         setError("ایمیل یا گذرواژه وارد شده نامعتبر است.")
         setIsLoading(false)
       } else {
-        router.push("/")
+        router.push("/overview")
       }
     }, 1000)
   }
@@ -47,13 +47,13 @@ export default function LoginPage() {
     <div className="min-h-[100dvh] w-full bg-surface-2 flex items-center justify-center p-4 md:p-8 relative">
       {/* Theme Toggle Corner */}
       <div className="absolute top-6 start-6 z-20">
-        <Button variant="ghost" size="sm" onClick={toggleTheme} className="size-10 p-0 rounded-full bg-surface border border-border shadow-sm text-fg-2 hover:text-fg">
+        <Button variant="ghost" size="sm" onClick={toggleTheme} className="size-10 p-0 rounded-xl bg-surface border border-border shadow-sm text-fg-2 hover:text-fg">
           {isDark ? <Sun className="size-4.5" /> : <Moon className="size-4.5" />}
         </Button>
       </div>
 
       {/* Main Card */}
-      <Card className="w-full max-w-[900px] grid grid-cols-1 md:grid-cols-5 overflow-hidden shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-border bg-background rounded-[2rem] min-h-[600px] anim-in">
+      <Card className="w-full max-w-[900px] grid grid-cols-1 md:grid-cols-5 overflow-hidden shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-border bg-surface rounded-xl min-h-[600px] anim-in">
         
         {/* Brand Side (Gradient/Frosted) */}
         <div className="hidden md:flex flex-col justify-between col-span-2 p-10 relative overflow-hidden bg-primary/5 border-e border-border">
@@ -63,7 +63,7 @@ export default function LoginPage() {
           
           <div className="relative z-10 flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="size-9 rounded-[12px] bg-primary text-primary-fg flex items-center justify-center font-extrabold text-lg shadow-sm">
+              <div className="size-9 rounded-xl bg-primary text-white flex items-center justify-center font-extrabold text-lg shadow-sm">
                 م
               </div>
               <div className="flex flex-col">
@@ -77,9 +77,9 @@ export default function LoginPage() {
           </div>
 
           <div className="relative z-10">
-            <div className="bg-surface/80 backdrop-blur-md border border-border/60 rounded-2xl p-5 inline-flex flex-col gap-3 shadow-sm">
+            <div className="bg-surface/80 backdrop-blur-md border border-border/60 rounded-xl p-5 inline-flex flex-col gap-3 shadow-sm">
                <div className="flex items-center gap-3">
-                 <div className="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                 <div className="size-8 rounded-xl bg-primary/20 flex items-center justify-center text-primary shrink-0">
                     <Sparkles className="size-4" />
                  </div>
                  <div className="flex flex-col gap-0.5">
@@ -96,7 +96,7 @@ export default function LoginPage() {
           
           {/* Mobile Brand (visible only on small screens) */}
           <div className="md:hidden flex items-center gap-3 mb-10">
-            <div className="size-9 rounded-[12px] bg-primary text-primary-fg flex items-center justify-center font-extrabold text-lg shadow-sm">
+            <div className="size-9 rounded-xl bg-primary text-white flex items-center justify-center font-extrabold text-lg shadow-sm">
               م
             </div>
             <div className="flex flex-col">

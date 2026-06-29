@@ -67,7 +67,7 @@ export default function EditWriterPage() {
           
           <Card className="flex flex-col overflow-hidden">
             <div className="bg-surface-2 p-4 border-b border-border flex items-center gap-3">
-              <div className="size-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center">
+              <div className="size-8 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center">
                 <Fingerprint className="size-4.5" />
               </div>
               <h2 className="text-[15px] font-extrabold text-fg">اثرانگشت صدا</h2>

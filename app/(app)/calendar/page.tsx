@@ -86,8 +86,8 @@ export default function CalendarPage() {
         )}
       >
         <span className={cn(
-          "text-[13px] font-bold tnum flex items-center justify-center size-7 rounded-full mb-2",
-          isToday ? "bg-primary text-primary-fg" : "text-fg-2 group-hover:text-fg"
+          "text-[13px] font-bold tnum flex items-center justify-center size-7 rounded-xl mb-2",
+          isToday ? "bg-primary text-white" : "text-fg-2 group-hover:text-fg"
         )}>
           {toPersianDigits(day)}
         </span>
@@ -195,7 +195,7 @@ export default function CalendarPage() {
           
           {!hasAnyArticles && (
             <div className="absolute inset-0 top-[120px] flex items-center justify-center pointer-events-none">
-              <div className="bg-surface/80 backdrop-blur-sm px-6 py-3 rounded-full border border-border shadow-sm text-[13px] font-bold text-fg-2">
+              <div className="bg-surface/80 backdrop-blur-sm px-6 py-3 rounded-xl border border-border shadow-sm text-[13px] font-bold text-fg-2">
                 موردی برای این ماه نیست.
               </div>
             </div>

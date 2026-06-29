@@ -157,7 +157,7 @@ export default function SuperAgentPage() {
         <div className="flex-1 overflow-y-auto p-4 md:p-6 flex flex-col gap-6">
           {messages.length === 0 ? (
             <div className="flex-1 flex flex-col items-center justify-center text-center max-w-lg mx-auto">
-              <div className="size-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
+              <div className="size-16 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6">
                 <Sparkles className="size-8" />
               </div>
               <h2 className="text-xl font-extrabold text-fg mb-2">چگونه می‌توانم کمک کنم؟</h2>
@@ -169,7 +169,7 @@ export default function SuperAgentPage() {
                 {SUGGESTIONS.map((sug, idx) => (
                   <button 
                     key={idx} 
-                    className="p-4 text-start cursor-pointer hover:border-primary/40 transition-all bg-background rounded-2xl border border-border shadow-sm hover:-translate-y-1 hover:shadow-md w-full focusable active:scale-[0.99]"
+                    className="p-4 text-start cursor-pointer hover:border-primary/40 transition-all bg-background rounded-xl border border-border shadow-sm hover:-translate-y-1 hover:shadow-md w-full focusable active:scale-[0.99]"
                     onClick={() => handleSend(sug)}
                   >
                     <span className="text-[13px] font-bold text-fg-2 hover:text-fg">{sug}</span>
@@ -185,7 +185,7 @@ export default function SuperAgentPage() {
                     
                     {/* Avatar */}
                     <div className={cn(
-                      "size-8 rounded-full flex items-center justify-center shrink-0 mt-1",
+                      "size-8 rounded-xl flex items-center justify-center shrink-0 mt-1",
                       msg.role === 'user' ? "bg-primary/20 text-primary" : "bg-indigo-100 text-indigo-600"
                     )}>
                       {msg.role === 'user' ? <User className="size-4" /> : <Sparkles className="size-4" />}
@@ -193,9 +193,9 @@ export default function SuperAgentPage() {
                     
                     {/* Bubble */}
                     <div className={cn(
-                      "p-4 rounded-2xl text-[14px] leading-[1.8]",
+                      "p-4 rounded-xl text-[14px] leading-[1.8]",
                       msg.role === 'user' 
-                        ? "bg-primary text-primary-fg rounded-se-sm" 
+                        ? "bg-primary text-white rounded-se-sm" 
                         : "bg-surface-2 text-fg border border-border/50 rounded-ss-sm"
                     )}>
                       {msg.content}
@@ -213,7 +213,7 @@ export default function SuperAgentPage() {
         {/* Composer */}
         <div className="shrink-0 p-4 bg-background border-t border-border">
           <div className="max-w-4xl mx-auto flex flex-col gap-2">
-            <div className="relative flex items-end gap-2 bg-surface-2 rounded-2xl p-2 border border-border focus-within:border-primary/50 focus-within:ring-1 focus-within:ring-primary/50 transition-all">
+            <div className="relative flex items-end gap-2 bg-surface-2 rounded-xl p-2 border border-border focus-within:border-primary/50 focus-within:ring-1 focus-within:ring-primary/50 transition-all">
               <textarea 
                 ref={textareaRef}
                 value={input}
@@ -229,7 +229,7 @@ export default function SuperAgentPage() {
               />
               <Button 
                 size="sm"
-                className="size-10 rounded-xl shrink-0 bg-primary text-primary-fg hover:bg-primary/90 disabled:opacity-50 mb-0.5"
+                className="size-10 rounded-xl shrink-0 bg-primary text-white hover:bg-primary/90 disabled:opacity-50 mb-0.5"
                 disabled={!input.trim() || isStreaming}
                 onClick={() => handleSend(input)}
               >

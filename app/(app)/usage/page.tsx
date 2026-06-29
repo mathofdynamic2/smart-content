@@ -102,7 +102,7 @@ export default function UsagePage() {
         <Card lift className="lg:col-span-2 p-6 flex flex-col gap-6 anim-in" style={{ '--i': 2 } as React.CSSProperties}>
           <div className="flex items-center justify-between">
             <h2 className="text-[16px] font-extrabold text-fg">مصرف توکن در ۱۴ روز اخیر</h2>
-            <div className="text-[12px] font-medium text-fg-3 bg-surface-2 px-3 py-1 rounded-full">
+            <div className="text-[12px] font-medium text-fg-3 bg-surface-2 px-3 py-1 rounded-xl">
               {toPersianDigits(296)} اجرا
             </div>
           </div>
@@ -112,32 +112,32 @@ export default function UsagePage() {
               <AreaChart data={USAGE_DATA} margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorTokens" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="var(--primary)" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="var(--primary)" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.3}/>
+                    <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0}/>
                   </linearGradient>
                 </defs>
-                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--border)" opacity={0.5} />
+                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" opacity={0.5} />
                 <XAxis 
                   dataKey="date" 
                   axisLine={false} 
                   tickLine={false} 
-                  tick={{ fontSize: 11, fill: 'var(--fg-3)', fontFamily: 'inherit' }}
+                  tick={{ fontSize: 11, fill: 'hsl(var(--fg-3))', fontFamily: 'inherit' }}
                   dy={10}
                 />
                 <YAxis 
                   axisLine={false} 
                   tickLine={false} 
-                  tick={{ fontSize: 11, fill: 'var(--fg-3)', fontFamily: 'inherit' }}
+                  tick={{ fontSize: 11, fill: 'hsl(var(--fg-3))', fontFamily: 'inherit' }}
                   tickFormatter={(value) => toPersianDigits(value.toLocaleString())}
                   width={60}
                 />
                 <Tooltip 
-                  contentStyle={{ borderRadius: '8px', border: '1px solid var(--border)', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', backgroundColor: 'var(--background)' }}
-                  itemStyle={{ color: 'var(--primary)', fontSize: '13px', fontWeight: 'bold' }}
-                  labelStyle={{ color: 'var(--fg-2)', fontSize: '12px', marginBottom: '4px' }}
+                  contentStyle={{ borderRadius: '8px', border: '1px solid hsl(var(--border))', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', backgroundColor: 'hsl(var(--background))' }}
+                  itemStyle={{ color: 'hsl(var(--primary))', fontSize: '13px', fontWeight: 'bold' }}
+                  labelStyle={{ color: 'hsl(var(--fg-2))', fontSize: '12px', marginBottom: '4px' }}
                   formatter={(value: any) => [toPersianDigits(Number(value).toLocaleString()) + ' توکن', 'مصرف']}
                 />
-                <Area type="monotone" dataKey="tokens" stroke="var(--primary)" strokeWidth={2} fillOpacity={1} fill="url(#colorTokens)" />
+                <Area type="monotone" dataKey="tokens" stroke="hsl(var(--primary))" strokeWidth={2} fillOpacity={1} fill="url(#colorTokens)" />
               </AreaChart>
             </ResponsiveContainer>
           </div>

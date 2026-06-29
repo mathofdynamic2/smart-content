@@ -115,12 +115,12 @@ export default function KnowledgePage() {
               <div className="pt-4 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="flex-1">
                   {saveStatus === 'success' && (
-                    <div className="flex items-center gap-2 text-[13px] font-bold text-green-600 bg-green-50 px-3 py-1.5 rounded-lg border border-green-200 anim-in">
+                    <div className="flex items-center gap-2 text-[13px] font-bold text-green-600 bg-green-50 px-3 py-1.5 rounded-xl border border-green-200 anim-in">
                       <CheckCircle2 className="size-4" /> پروفایل ذخیره شد ✓
                     </div>
                   )}
                   {saveStatus === 'error' && (
-                    <div className="flex items-center gap-2 text-[13px] font-bold text-red-600 bg-red-50 px-3 py-1.5 rounded-lg border border-red-200 anim-in">
+                    <div className="flex items-center gap-2 text-[13px] font-bold text-red-600 bg-red-50 px-3 py-1.5 rounded-xl border border-red-200 anim-in">
                       <AlertCircle className="size-4" /> خطایی در ذخیره‌سازی رخ داد
                     </div>
                   )}
@@ -142,7 +142,7 @@ export default function KnowledgePage() {
         <div className="lg:col-span-4 anim-in" style={{ '--i': 2 } as React.CSSProperties}>
           <Card lift className="flex flex-col p-5 sticky top-6 bg-surface-2/50 border-dashed">
             <div className="flex items-center gap-2 mb-4">
-              <div className="size-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
+              <div className="size-8 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
                 <Sparkles className="size-4.5" />
               </div>
               <div>
@@ -174,13 +174,13 @@ export default function KnowledgePage() {
               </Button>
 
               {extractStatus === 'success' && (
-                <div className="flex items-start gap-2 mt-2 p-3 bg-green-50/50 border border-green-200 rounded-lg text-green-700 text-[12px] anim-in">
+                <div className="flex items-start gap-2 mt-2 p-3 bg-green-50/50 border border-green-200 rounded-xl text-green-700 text-[12px] anim-in">
                   <CheckCircle2 className="size-4 shrink-0 mt-0.5" />
                   <span>اطلاعات با موفقیت استخراج و در فیلدها جایگذاری شد. مقادیر را بررسی و ذخیره کنید.</span>
                 </div>
               )}
               {extractStatus === 'error' && (
-                <div className="flex items-start gap-2 mt-2 p-3 bg-red-50/50 border border-red-200 rounded-lg text-red-700 text-[12px] anim-in">
+                <div className="flex items-start gap-2 mt-2 p-3 bg-red-50/50 border border-red-200 rounded-xl text-red-700 text-[12px] anim-in">
                   <AlertCircle className="size-4 shrink-0 mt-0.5" />
                   <span>لطفاً متن معتبری را برای استخراج وارد کنید.</span>
                 </div>

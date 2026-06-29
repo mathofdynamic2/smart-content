@@ -23,6 +23,9 @@ const config: Config = {
         down: "hsl(var(--down))",
         "down-bg": "hsl(var(--down-bg))",
       },
+      fontFamily: {
+        sans: ["var(--font-vazir)", "sans-serif"],
+      },
       borderRadius: {
         pill: "9999px",
         badge: "12px",

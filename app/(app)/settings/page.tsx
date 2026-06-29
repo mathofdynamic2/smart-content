@@ -126,7 +126,7 @@ export default function SettingsPage() {
                         onClick={() => removeKeyword(kw)} 
                         type="button"
                         aria-label={`حذف کلیدواژه ${kw}`}
-                        className="ms-2 size-4 rounded-full flex items-center justify-center text-fg-3 hover:text-fg hover:bg-surface transition-colors focusable"
+                        className="ms-2 size-4 rounded-md flex items-center justify-center text-fg-3 hover:text-fg hover:bg-surface transition-colors focusable"
                       >
                         <X className="size-3" />
                       </button>

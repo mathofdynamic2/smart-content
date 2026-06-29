@@ -116,7 +116,7 @@ export default function EditorPage() {
                 <div className="flex flex-wrap gap-2 pt-1.5">
                   <Chip tone="neutral">تکنولوژی <X className="size-3 inline ms-1 cursor-pointer" /></Chip>
                   <Chip tone="neutral">هوش مصنوعی <X className="size-3 inline ms-1 cursor-pointer" /></Chip>
-                  <button className="inline-flex items-center justify-center size-6 rounded-full bg-surface-2 hover:bg-border text-fg-3 transition-colors border border-dashed border-border">
+                  <button className="inline-flex items-center justify-center size-6 rounded-md bg-surface-2 hover:bg-border text-fg-3 transition-colors border border-dashed border-border">
                     <Plus className="size-3" />
                   </button>
                 </div>
@@ -318,11 +318,11 @@ export default function EditorPage() {
                       </div>
 
                       <div className="grid grid-cols-2 gap-3">
-                        <div className="p-3 bg-surface-2 rounded-lg text-center">
+                        <div className="p-3 bg-surface-2 rounded-xl text-center">
                           <div className="text-[11px] text-fg-3 mb-1 font-medium">تعداد کلمات</div>
                           <div className="text-lg font-bold text-fg tnum">۱,۲۸۴</div>
                         </div>
-                        <div className="p-3 bg-surface-2 rounded-lg text-center">
+                        <div className="p-3 bg-surface-2 rounded-xl text-center">
                           <div className="text-[11px] text-fg-3 mb-1 font-medium">چگالی کلمه کلیدی</div>
                           <div className="text-lg font-bold text-green-600 tnum">۲.۴٪</div>
                         </div>
@@ -368,7 +368,7 @@ export default function EditorPage() {
                 <div className="flex flex-col gap-6">
                   {!socialGenerated ? (
                     <div className="flex flex-col items-center justify-center py-10 text-center gap-4">
-                      <div className="size-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center">
+                      <div className="size-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
                         <Share2 className="size-6" />
                       </div>
                       <div>
@@ -473,7 +473,7 @@ export default function EditorPage() {
                 <div className="flex flex-col gap-6">
                   
                   <div className="border-2 border-dashed border-border rounded-xl p-6 flex flex-col items-center justify-center text-center bg-surface hover:bg-surface-2 hover:border-primary/50 transition-colors cursor-pointer group">
-                    <div className="size-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                    <div className="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                       <UploadCloud className="size-5" />
                     </div>
                     <div className="text-[13px] font-bold text-fg">آپلود تصویر جدید</div>
@@ -497,29 +497,29 @@ export default function EditorPage() {
                     <div className="grid grid-cols-2 gap-3">
                       
                       {/* Media Item */}
-                      <div className="group relative aspect-square rounded-lg overflow-hidden border border-border bg-surface-2 flex items-center justify-center">
+                      <div className="group relative aspect-square rounded-xl overflow-hidden border border-border bg-surface-2 flex items-center justify-center">
                         <ImageLucide className="size-8 text-fg-3 opacity-50" />
                         <img src="https://picsum.photos/seed/tech1/400/400" className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80" alt="Tech" />
                         
                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-2">
-                          <button className="h-7 px-3 bg-white/20 hover:bg-white text-white hover:text-black rounded-full text-[11px] font-bold backdrop-blur-sm transition-colors">استفاده در متن</button>
+                          <button className="h-7 px-3 bg-white/20 hover:bg-white text-white hover:text-black rounded-xl text-[11px] font-bold backdrop-blur-sm transition-colors">استفاده در متن</button>
                           <div className="flex gap-2">
-                            <button className="size-7 rounded-full bg-white/20 hover:bg-white text-white hover:text-black flex items-center justify-center backdrop-blur-sm transition-colors"><Download className="size-3.5" /></button>
-                            <button className="size-7 rounded-full bg-red-500/80 hover:bg-red-500 text-white flex items-center justify-center backdrop-blur-sm transition-colors"><Trash2 className="size-3.5" /></button>
+                            <button className="size-7 rounded-xl bg-white/20 hover:bg-white text-white hover:text-black flex items-center justify-center backdrop-blur-sm transition-colors"><Download className="size-3.5" /></button>
+                            <button className="size-7 rounded-xl bg-red-500/80 hover:bg-red-500 text-white flex items-center justify-center backdrop-blur-sm transition-colors"><Trash2 className="size-3.5" /></button>
                           </div>
                         </div>
                       </div>
 
                       {/* Media Item */}
-                      <div className="group relative aspect-square rounded-lg overflow-hidden border border-border bg-surface-2 flex items-center justify-center">
+                      <div className="group relative aspect-square rounded-xl overflow-hidden border border-border bg-surface-2 flex items-center justify-center">
                         <ImageLucide className="size-8 text-fg-3 opacity-50" />
                         <img src="https://picsum.photos/seed/tech2/400/400" className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80" alt="Tech" />
                         
                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-2">
-                          <button className="h-7 px-3 bg-white/20 hover:bg-white text-white hover:text-black rounded-full text-[11px] font-bold backdrop-blur-sm transition-colors">استفاده در متن</button>
+                          <button className="h-7 px-3 bg-white/20 hover:bg-white text-white hover:text-black rounded-xl text-[11px] font-bold backdrop-blur-sm transition-colors">استفاده در متن</button>
                           <div className="flex gap-2">
-                            <button className="size-7 rounded-full bg-white/20 hover:bg-white text-white hover:text-black flex items-center justify-center backdrop-blur-sm transition-colors"><Download className="size-3.5" /></button>
-                            <button className="size-7 rounded-full bg-red-500/80 hover:bg-red-500 text-white flex items-center justify-center backdrop-blur-sm transition-colors"><Trash2 className="size-3.5" /></button>
+                            <button className="size-7 rounded-xl bg-white/20 hover:bg-white text-white hover:text-black flex items-center justify-center backdrop-blur-sm transition-colors"><Download className="size-3.5" /></button>
+                            <button className="size-7 rounded-xl bg-red-500/80 hover:bg-red-500 text-white flex items-center justify-center backdrop-blur-sm transition-colors"><Trash2 className="size-3.5" /></button>
                           </div>
                         </div>
                       </div>
@@ -560,7 +560,7 @@ export default function EditorPage() {
 
               {isGeneratingImg && (
                 <div className="aspect-video w-full rounded-xl bg-surface-2 border border-border flex flex-col items-center justify-center gap-3 anim-in">
-                  <div className="size-12 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center">
+                  <div className="size-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center">
                     <Sparkles className="size-6 animate-pulse" />
                   </div>
                   <div className="text-[13px] font-bold text-fg">در حال خلق تصویر...</div>

@@ -109,7 +109,7 @@ export default function LibraryPage() {
                   key={tab}
                   onClick={() => setActiveTab(tab)}
                   className={cn(
-                    "px-4 py-1.5 rounded-full text-[12.5px] font-bold whitespace-nowrap transition-colors focusable border",
+                    "px-4 py-1.5 rounded-xl text-[12.5px] font-bold whitespace-nowrap transition-colors focusable border",
                     activeTab === tab 
                       ? "bg-primary text-white border-primary shadow-[0_2px_8px_rgba(37,99,235,0.25)]" 
                       : "bg-surface text-fg-2 border-border hover:bg-surface-2 hover:text-fg"
@@ -252,7 +252,7 @@ export default function LibraryPage() {
                 <p className="text-[12.5px] text-fg-3 text-center w-full py-4">برچسبی ساخته نشده.</p>
               ) : (
                 tags.map((tag, idx) => (
-                  <div key={idx} className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-2 border border-border rounded-badge text-[12px] font-medium text-fg group">
+                  <div key={idx} className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-2 border border-border rounded-xl text-[12px] font-medium text-fg group">
                     <span>{tag}</span>
                     <button className="text-fg-3 hover:text-down transition-colors focusable rounded-sm p-0.5 ms-0.5">
                       <X className="size-3" />
